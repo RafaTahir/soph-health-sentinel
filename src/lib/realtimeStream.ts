@@ -203,22 +203,13 @@ export function useRealtimeOrSimulatedStream() {
     };
   }, [all, running, pushNext]);
 
-  // Auto-start live seeding when table is empty
+  // Auto-start live seeding whenever stream is running (continuous demo)
   useEffect(() => {
     if (!running) return;
     if (!(isSupabaseReady && supabase)) return;
     if (seeding.current) return;
-    // Check if table has any rows; if none, begin seeding
-    supabase
-      .from("posts")
-      .select("id")
-      .limit(1)
-      .then(({ data, error }) => {
-        if (!error && (!data || data.length === 0)) {
-          startSeeding();
-        }
-      });
-  }, [running, all.length]);
+    startSeeding();
+  }, [running]);
 
   // Cleanup seeder on unmount
   useEffect(() => {

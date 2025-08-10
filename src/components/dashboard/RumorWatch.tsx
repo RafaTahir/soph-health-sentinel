@@ -10,7 +10,7 @@ export default function RumorWatch({ misinfo, onSelect }: RumorWatchProps) {
   return (
     <Card className="h-[380px] flex flex-col">
       <CardHeader>
-        <CardTitle className="text-base">Rumor Watch</CardTitle>
+        <CardTitle className="text-base">Fact Check</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 overflow-auto space-y-3 pr-1">
         {misinfo.length === 0 && (

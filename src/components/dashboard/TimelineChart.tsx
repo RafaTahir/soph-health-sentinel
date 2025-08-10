@@ -7,7 +7,7 @@ interface TimelineChartProps {
 export default function TimelineChart({ data }: TimelineChartProps) {
   return (
     <div className="rounded-lg border bg-card p-4">
-      <p className="text-sm font-semibold mb-2">Outbreak Chatter Over Time</p>
+      <p className="text-sm font-semibold mb-2">Outbreak Chatter</p>
       <div className="h-52">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ left: 12, right: 12, top: 8, bottom: 0 }}>
