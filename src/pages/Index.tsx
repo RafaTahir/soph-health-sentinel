@@ -7,6 +7,8 @@ import FactCheckCard from "@/components/dashboard/FactCheckCard";
 import { Button } from "@/components/ui/button";
 import { useRealtimeOrSimulatedStream } from "@/lib/realtimeStream";
 import { ProcessedPost } from "@/types/Post";
+import HealthStatsCard from "@/components/dashboard/HealthStatsCard";
+import { useFakeHealthStats } from "@/hooks/useFakeHealthStats";
 
 const Index = () => {
   const { hotspots, misinfo, timeline, selangorSignal, start, stop, running, denguePosts } = useRealtimeOrSimulatedStream();
@@ -28,6 +30,9 @@ const Index = () => {
     () => "Real-time outbreak signals and misinformation shield for national response",
     []
   );
+
+  const DEMO_FAKE_HEALTH_STATS = true;
+  const { stats: healthStats } = useFakeHealthStats({ enabled: DEMO_FAKE_HEALTH_STATS });
 
   const onSelectRumor = (p: ProcessedPost) => {
     setSelected(p);
@@ -56,8 +61,9 @@ const Index = () => {
         <div className="lg:col-span-2 animate-enter">
           <MapHeat hotspots={hotspots} />
         </div>
-        <div className="lg:col-span-1 animate-enter">
+        <div className="lg:col-span-1 space-y-4 animate-enter">
           <RumorWatch misinfo={misinfo} onSelect={onSelectRumor} />
+          <HealthStatsCard stats={healthStats} />
         </div>
       </section>
 
