@@ -1,0 +1,242 @@
+[
+  {
+    "id": "p001",
+    "timestamp": "2025-08-10T08:00:00Z",
+    "text": "Hearing about rising dengue fever cases in Shah Alam. Anyone else? #dengue #selangor",
+    "location": { "lat": 3.0733, "lng": 101.5185, "name": "Shah Alam, Selangor" },
+    "type": "general",
+    "user": "@civicwatchMY"
+  },
+  {
+    "id": "p002",
+    "timestamp": "2025-08-10T08:03:00Z",
+    "text": "My cousin tested positive for dengue in PJ hospital. Stay safe people.",
+    "location": { "lat": 3.1073, "lng": 101.6067, "name": "Petaling Jaya, Selangor" },
+    "type": "confirmed",
+    "user": "@amy_lin"
+  },
+  {
+    "id": "p003",
+    "timestamp": "2025-08-10T08:05:00Z",
+    "text": "Drinking papaya leaf juice cures dengue in 24 hours! Pass it on!",
+    "location": { "lat": 3.139, "lng": 101.6869, "name": "Kuala Lumpur" },
+    "type": "misinformation",
+    "user": "@healthtips_fast"
+  },
+  {
+    "id": "p004",
+    "timestamp": "2025-08-10T08:07:00Z",
+    "text": "Lots of mosquitoes near Klang river this week, kids falling sick. Dengue fears...",
+    "location": { "lat": 3.0333, "lng": 101.45, "name": "Klang, Selangor" },
+    "type": "general",
+    "user": "@klangmom"
+  },
+  {
+    "id": "p005",
+    "timestamp": "2025-08-10T08:10:00Z",
+    "text": "Hospital in Gombak is seeing more dengue admissions according to a friend nurse.",
+    "location": { "lat": 3.2333, "lng": 101.7333, "name": "Gombak, Selangor" },
+    "type": "general",
+    "user": "@mohdfirdaus"
+  },
+  {
+    "id": "p006",
+    "timestamp": "2025-08-10T08:12:00Z",
+    "text": "Confirmed dengue in Shah Alam apartment block B. Please fog the area!",
+    "location": { "lat": 3.078, "lng": 101.52, "name": "Shah Alam, Selangor" },
+    "type": "confirmed",
+    "user": "@residentsHA"
+  },
+  {
+    "id": "p007",
+    "timestamp": "2025-08-10T08:15:00Z",
+    "text": "Dengue spreads through person-to-person contact. Avoid crowded malls!",
+    "location": { "lat": 3.139, "lng": 101.6869, "name": "Kuala Lumpur" },
+    "type": "misinformation",
+    "user": "@viralnewsMY"
+  },
+  {
+    "id": "p008",
+    "timestamp": "2025-08-10T08:18:00Z",
+    "text": "Heard school in PJ sent kids home due to dengue scare. Anyone confirms?",
+    "location": { "lat": 3.11, "lng": 101.62, "name": "Petaling Jaya, Selangor" },
+    "type": "general",
+    "user": "@selangor_updates"
+  },
+  {
+    "id": "p009",
+    "timestamp": "2025-08-10T08:20:00Z",
+    "text": "Neighbor down with dengue. Authorities informed. #dengue",
+    "location": { "lat": 3.12, "lng": 101.65, "name": "Petaling Jaya, Selangor" },
+    "type": "confirmed",
+    "user": "@pjresident"
+  },
+  {
+    "id": "p010",
+    "timestamp": "2025-08-10T08:23:00Z",
+    "text": "Garlic water keeps dengue mosquitoes away. Try it!",
+    "location": { "lat": 3.0333, "lng": 101.45, "name": "Klang, Selangor" },
+    "type": "misinformation",
+    "user": "@instanthealth"
+  },
+  {
+    "id": "p011",
+    "timestamp": "2025-08-10T08:25:00Z",
+    "text": "More dengue chatter in Bukit Jelutong community group. Concern rising.",
+    "location": { "lat": 3.1044, "lng": 101.5491, "name": "Bukit Jelutong, Selangor" },
+    "type": "general",
+    "user": "@jelutong_forum"
+  },
+  {
+    "id": "p012",
+    "timestamp": "2025-08-10T08:28:00Z",
+    "text": "Govt hiding numbers! Dengue deaths in PJ higher than reported!",
+    "location": { "lat": 3.11, "lng": 101.62, "name": "Petaling Jaya, Selangor" },
+    "type": "misinformation",
+    "user": "@rumortracker"
+  },
+  {
+    "id": "p013",
+    "timestamp": "2025-08-10T08:30:00Z",
+    "text": "Confirmed: cousin’s lab results dengue positive in Klang.",
+    "location": { "lat": 3.05, "lng": 101.45, "name": "Klang, Selangor" },
+    "type": "confirmed",
+    "user": "@rahman"
+  },
+  {
+    "id": "p014",
+    "timestamp": "2025-08-10T08:33:00Z",
+    "text": "Dengue vaccine available everywhere now, just ask your GP!",
+    "location": { "lat": 3.139, "lng": 101.6869, "name": "Kuala Lumpur" },
+    "type": "misinformation",
+    "user": "@health_corner"
+  },
+  {
+    "id": "p015",
+    "timestamp": "2025-08-10T08:36:00Z",
+    "text": "Mosquito fogging truck spotted in Shah Alam tonight. Good move.",
+    "location": { "lat": 3.07, "lng": 101.51, "name": "Shah Alam, Selangor" },
+    "type": "general",
+    "user": "@cityeye"
+  },
+  {
+    "id": "p016",
+    "timestamp": "2025-08-10T08:40:00Z",
+    "text": "Husband admitted for dengue in Gombak. Hoping quick recovery.",
+    "location": { "lat": 3.23, "lng": 101.73, "name": "Gombak, Selangor" },
+    "type": "confirmed",
+    "user": "@syaza"
+  },
+  {
+    "id": "p017",
+    "timestamp": "2025-08-10T08:43:00Z",
+    "text": "If you eat certain herbs, dengue can’t infect you. Proven by my aunt!",
+    "location": { "lat": 3.0733, "lng": 101.5185, "name": "Shah Alam, Selangor" },
+    "type": "misinformation",
+    "user": "@naturalcures"
+  },
+  {
+    "id": "p018",
+    "timestamp": "2025-08-10T08:47:00Z",
+    "text": "Clinic doctor said they saw more dengue tests this week in PJ.",
+    "location": { "lat": 3.11, "lng": 101.62, "name": "Petaling Jaya, Selangor" },
+    "type": "general",
+    "user": "@pj_clinic"
+  },
+  {
+    "id": "p019",
+    "timestamp": "2025-08-10T08:50:00Z",
+    "text": "Neighbor hospitalized for dengue in KL. Worried.",
+    "location": { "lat": 3.139, "lng": 101.6869, "name": "Kuala Lumpur" },
+    "type": "confirmed",
+    "user": "@cheng"
+  },
+  {
+    "id": "p020",
+    "timestamp": "2025-08-10T08:54:00Z",
+    "text": "UV lamps kill dengue mosquitoes instantly! Get one now!",
+    "location": { "lat": 3.05, "lng": 101.45, "name": "Klang, Selangor" },
+    "type": "misinformation",
+    "user": "@quickfix"
+  },
+  {
+    "id": "p021",
+    "timestamp": "2025-08-10T08:57:00Z",
+    "text": "Bukit Jelutong residents discussing stagnant water clean-up. Dengue prevention",
+    "location": { "lat": 3.1044, "lng": 101.5491, "name": "Bukit Jelutong, Selangor" },
+    "type": "general",
+    "user": "@greenmy"
+  },
+  {
+    "id": "p022",
+    "timestamp": "2025-08-10T09:00:00Z",
+    "text": "Penang friends talking dengue too, but seems lower than Selangor.",
+    "location": { "lat": 5.4141, "lng": 100.3288, "name": "George Town, Penang" },
+    "type": "general",
+    "user": "@penanglife"
+  },
+  {
+    "id": "p023",
+    "timestamp": "2025-08-10T09:03:00Z",
+    "text": "Seen two confirmed dengue in PJ condominium block. Management notified.",
+    "location": { "lat": 3.12, "lng": 101.65, "name": "Petaling Jaya, Selangor" },
+    "type": "confirmed",
+    "user": "@condoalert"
+  },
+  {
+    "id": "p024",
+    "timestamp": "2025-08-10T09:06:00Z",
+    "text": "Lemongrass candles 100% prevent dengue infections. Don’t trust hospitals!",
+    "location": { "lat": 3.2333, "lng": 101.7333, "name": "Gombak, Selangor" },
+    "type": "misinformation",
+    "user": "@skeptic"
+  },
+  {
+    "id": "p025",
+    "timestamp": "2025-08-10T09:10:00Z",
+    "text": "Another positive dengue in Shah Alam section 13.",
+    "location": { "lat": 3.0733, "lng": 101.5185, "name": "Shah Alam, Selangor" },
+    "type": "confirmed",
+    "user": "@section13news"
+  },
+  {
+    "id": "p026",
+    "timestamp": "2025-08-10T09:14:00Z",
+    "text": "Rumor: dengue is airborne now. Masks required again!",
+    "location": { "lat": 3.139, "lng": 101.6869, "name": "Kuala Lumpur" },
+    "type": "misinformation",
+    "user": "@panicpage"
+  },
+  {
+    "id": "p027",
+    "timestamp": "2025-08-10T09:17:00Z",
+    "text": "Community clean-up in PJ Sunday morning. Let’s remove stagnant water!",
+    "location": { "lat": 3.11, "lng": 101.62, "name": "Petaling Jaya, Selangor" },
+    "type": "general",
+    "user": "@pjcommunity"
+  },
+  {
+    "id": "p028",
+    "timestamp": "2025-08-10T09:20:00Z",
+    "text": "Klang residents report more fever cases matching dengue symptoms.",
+    "location": { "lat": 3.05, "lng": 101.45, "name": "Klang, Selangor" },
+    "type": "general",
+    "user": "@klangviral"
+  },
+  {
+    "id": "p029",
+    "timestamp": "2025-08-10T09:24:00Z",
+    "text": "Dengue hotline busy; multiple calls from Shah Alam section 7.",
+    "location": { "lat": 3.07, "lng": 101.51, "name": "Shah Alam, Selangor" },
+    "type": "general",
+    "user": "@hotlineMY"
+  },
+  {
+    "id": "p030",
+    "timestamp": "2025-08-10T09:28:00Z",
+    "text": "Friend’s test came back dengue positive. Stay vigilant PJ.",
+    "location": { "lat": 3.12, "lng": 101.65, "name": "Petaling Jaya, Selangor" },
+    "type": "confirmed",
+    "user": "@jason"
+  }
+]
