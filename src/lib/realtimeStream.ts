@@ -14,6 +14,26 @@ export function useRealtimeOrSimulatedStream() {
   const [running, setRunning] = useState(false);
   const timer = useRef<number | null>(null);
   const realtimeSub = useRef<ReturnType<NonNullable<typeof supabase>["channel"]> | null>(null);
+  // Live seeding controls (for demo data via Supabase Realtime)
+  const seederTimer = useRef<number | null>(null);
+  const seeding = useRef(false);
+  const seedIdx = useRef(0);
+
+  // Pool of plausible live posts around Selangor/Klang Valley
+  const SEED_POOL: Array<Omit<RawPost, "id">> = [
+    { timestamp: new Date().toISOString(), text: "Hearing about fever cases in Puchong — anyone else?", location: { lat: 3.015, lng: 101.621 }, type: "general", user: "@puchongwatch" },
+    { timestamp: new Date().toISOString(), text: "BREAKING: 5 confirmed dengue cases in Petaling Jaya hospital.", location: { lat: 3.107, lng: 101.64 }, type: "confirmed", user: "@healthnews_my" },
+    { timestamp: new Date().toISOString(), text: "Drinking papaya leaf juice prevents dengue — share!", location: { lat: 3.073, lng: 101.518 }, type: "misinformation", user: "@viralhealth" },
+    { timestamp: new Date().toISOString(), text: "Local school closed after suspected dengue in Subang Jaya.", location: { lat: 3.072, lng: 101.585 }, type: "confirmed", user: "@subangcommunity" },
+    { timestamp: new Date().toISOString(), text: "My neighbor got dengue — stay safe, Shah Alam!", location: { lat: 3.073, lng: 101.518 }, type: "general", user: "@shahalamresident" },
+    { timestamp: new Date().toISOString(), text: "High mosquito density reported near Klang river", location: { lat: 3.038, lng: 101.449 }, type: "general", user: "@klangupdate" },
+    { timestamp: new Date().toISOString(), text: "Clinic confirms multiple dengue admissions in PJ", location: { lat: 3.107, lng: 101.64 }, type: "confirmed", user: "@pjclinic" },
+    { timestamp: new Date().toISOString(), text: "Garlic water keeps dengue away – proven!", location: { lat: 3.215, lng: 101.575 }, type: "misinformation", user: "@miraclecures" },
+    { timestamp: new Date().toISOString(), text: "Fogging scheduled tonight in Gombak", location: { lat: 3.238, lng: 101.689 }, type: "general", user: "@gombakcouncil" },
+    { timestamp: new Date().toISOString(), text: "Hospital Shah Alam reports spike in dengue cases", location: { lat: 3.073, lng: 101.518 }, type: "confirmed", user: "@moh_updates" },
+    { timestamp: new Date().toISOString(), text: "Heatwave means dengue can't spread – don't worry", location: { lat: 3.215, lng: 101.575 }, type: "misinformation", user: "@randomfacts" },
+    { timestamp: new Date().toISOString(), text: "Neighbors coordinating cleanup of stagnant water in PJ", location: { lat: 3.107, lng: 101.64 }, type: "general", user: "@pjneighbors" },
+  ];
 
   // Load initial data
   useEffect(() => {
@@ -85,6 +105,44 @@ export function useRealtimeOrSimulatedStream() {
     });
   }, []);
 
+  // Live demo seeding via Supabase Realtime
+  const startSeeding = () => {
+    if (seeding.current || !isSupabaseReady || !supabase) return;
+    toast({ title: "Seeding live demo", description: "Streaming via Supabase Realtime." });
+    seeding.current = true;
+    seedIdx.current = 0;
+    const insertNext = async () => {
+      try {
+        const base = SEED_POOL[seedIdx.current % SEED_POOL.length];
+        seedIdx.current += 1;
+        const row = {
+          timestamp: new Date().toISOString(),
+          text: base.text,
+          location: base.location,
+          type: base.type,
+          user: base.user ?? null,
+        } as any;
+        const { error } = await supabase.from("posts").insert(row);
+        if (error) throw error;
+      } catch (e) {
+        console.error("Seeding error", e);
+        toast({ title: "Seeding failed", description: "Falling back to local simulator." });
+        stopSeeding();
+      }
+    };
+    // fire first insert immediately, then interval
+    insertNext();
+    seederTimer.current = window.setInterval(insertNext, 3000);
+  };
+
+  const stopSeeding = () => {
+    if (seederTimer.current) {
+      window.clearInterval(seederTimer.current);
+      seederTimer.current = null;
+    }
+    seeding.current = false;
+  };
+
   const start = useCallback(() => {
     if (running) return;
     setRunning(true);
@@ -119,6 +177,7 @@ export function useRealtimeOrSimulatedStream() {
 
   const stop = useCallback(() => {
     setRunning(false);
+    stopSeeding();
     if (timer.current) {
       window.clearTimeout(timer.current);
       timer.current = null;
@@ -143,6 +202,30 @@ export function useRealtimeOrSimulatedStream() {
       if (timer.current) window.clearTimeout(timer.current);
     };
   }, [all, running, pushNext]);
+
+  // Auto-start live seeding when table is empty
+  useEffect(() => {
+    if (!running) return;
+    if (!(isSupabaseReady && supabase)) return;
+    if (seeding.current) return;
+    // Check if table has any rows; if none, begin seeding
+    supabase
+      .from("posts")
+      .select("id")
+      .limit(1)
+      .then(({ data, error }) => {
+        if (!error && (!data || data.length === 0)) {
+          startSeeding();
+        }
+      });
+  }, [running, all.length]);
+
+  // Cleanup seeder on unmount
+  useEffect(() => {
+    return () => {
+      if (seeding.current) stopSeeding();
+    };
+  }, []);
 
   // Derived metrics (same as simulator)
   const denguePosts = useMemo(() => all.filter((p) => p.diseases.includes("dengue")), [all]);

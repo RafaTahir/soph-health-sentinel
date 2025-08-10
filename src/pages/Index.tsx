@@ -44,7 +44,7 @@ const Index = () => {
             <AlertBanner level={selangorSignal.level} />
             <div className="flex items-center gap-2">
               <Button variant="outline" onClick={running ? stop : start}>
-                {running ? "Pause Simulation" : "Start Simulation"}
+                {running ? "Pause Stream" : "Start Stream"}
               </Button>
               <Button variant="hero">Share Situation Report</Button>
             </div>
