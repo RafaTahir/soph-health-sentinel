@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2025-08-10T08:00:00",
+    "text": "Hearing about fever cases in Puchong — anyone else?",
+    "location": { "lat": 3.015, "lng": 101.621 },
+    "type": "general"
+  },
+  {
+    "timestamp": "2025-08-10T08:03:00",
+    "text": "BREAKING: 5 confirmed dengue cases in Petaling Jaya hospital.",
+    "location": { "lat": 3.107, "lng": 101.64 },
+    "type": "confirmed"
+  },
+  {
+    "timestamp": "2025-08-10T08:05:00",
+    "text": "Drinking more papaya leaf juice will prevent dengue — share to everyone!",
+    "location": { "lat": 3.073, "lng": 101.518 },
+    "type": "misinformation"
+  },
+  {
+    "timestamp": "2025-08-10T08:07:00",
+    "text": "Local school closed after suspected dengue outbreak in Subang Jaya.",
+    "location": { "lat": 3.072, "lng": 101.585 },
+    "type": "confirmed"
+  },
+  {
+    "timestamp": "2025-08-10T08:10:00",
+    "text": "My neighbor just got diagnosed with dengue — stay safe, Shah Alam!",
+    "location": { "lat": 3.073, "lng": 101.518 },
+    "type": "general"
+  }
+]

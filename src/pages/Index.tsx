@@ -5,11 +5,11 @@ import RumorWatch from "@/components/dashboard/RumorWatch";
 import TimelineChart from "@/components/dashboard/TimelineChart";
 import FactCheckCard from "@/components/dashboard/FactCheckCard";
 import { Button } from "@/components/ui/button";
-import { useDataStream } from "@/lib/dataStream";
+import { useRealtimeOrSimulatedStream } from "@/lib/realtimeStream";
 import { ProcessedPost } from "@/types/Post";
 
 const Index = () => {
-  const { hotspots, misinfo, timeline, selangorSignal, start, stop, running, denguePosts } = useDataStream();
+  const { hotspots, misinfo, timeline, selangorSignal, start, stop, running, denguePosts } = useRealtimeOrSimulatedStream();
   const [selected, setSelected] = useState<ProcessedPost | null>(null);
   const [open, setOpen] = useState(false);
 
